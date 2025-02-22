@@ -156,56 +156,73 @@
         const {fajr, sunset, sunrise} = times;
         fillContainer(`
 <div class="app-container app-container--auto-height">
-    <h3 class="text-white btn btn-dark btn-lg" style="width: 90%; text-align: center; text-transform: uppercase; display: flex; justify-content: space-between; align-items: center;">
-        <span class="js-left" style="padding: 10px; padding-left: 0;"><span class="oi oi-arrow-left text-info js-left"></span></span>
+    <!-- Header Section -->
+    <h3 class="text-white btn btn-dark btn-lg d-flex justify-content-between align-items-center" style="width: 90%; text-align: center; text-transform: uppercase; padding: 15px 0;">
+        <span class="js-left" style="padding: 10px; padding-left: 0; cursor: pointer;">
+            <span class="oi oi-arrow-left text-info js-left"></span>
+        </span>
         <span>${getFormattedDate()}</span>
-        <span class="js-right" style="padding: 10px; padding-right: 0;"><span class="oi oi-arrow-right text-info js-right"></span></span>
+        <span class="js-right" style="padding: 10px; padding-right: 0; cursor: pointer;">
+            <span class="oi oi-arrow-right text-info js-right"></span>
+        </span>
     </h3>
-    <div class="card text-white bg-primary" style="width: 90%;border-radius:0;">
-        <div class="card-body time-container">
-            <span>Sehri</span>
+
+    <!-- Sehri Section -->
+    <div class="card text-white bg-primary mb-3" style="width: 90%; border-radius: 10px;">
+        <div class="card-body d-flex justify-content-between align-items-center">
+            <span class="time-label">Sehri</span>
             <h4 class="card-title time-container__title">${fajr}</h4>
         </div>
     </div>
-    <div class="card text-white bg-primary" style="width: 90%;border-radius:0;">
-        <div class="card-body time-container">
-            <span>Sunrise</span>
+
+    <!-- Sunrise Section -->
+    <div class="card text-white bg-primary mb-3" style="width: 90%; border-radius: 10px;">
+        <div class="card-body d-flex justify-content-between align-items-center">
+            <span class="time-label">Sunrise</span>
             <h4 class="card-title time-container__title">${sunrise}</h4>
         </div>
     </div>
-    <div class="card text-white bg-primary" style="width: 90%;border-radius:0;">
-        <div class="card-body time-container">
-            <span>Iftaar</span>
+
+    <!-- Iftaar Section -->
+    <div class="card text-white bg-primary mb-3" style="width: 90%; border-radius: 10px;">
+        <div class="card-body d-flex justify-content-between align-items-center">
+            <span class="time-label">Iftaar</span>
             <h4 class="card-title time-container__title">${sunset}</h4>
         </div>
     </div>
-    <div class="card text-white bg-dark" style="width: 90%;">
-        <div class="card-header time-container">
-            <span>Fajr</span>
+
+    <!-- Prayer Times Section -->
+    <div class="card text-white bg-dark mb-3" style="width: 90%; border-radius: 10px;">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <span class="time-label">Fajr</span>
             <h6 class="card-title time-container__title">${times.fajr}</h6>
         </div>
     </div>
-    <div class="card text-white bg-dark" style="width: 90%;">
-        <div class="card-header time-container">
-            <span>Zhuhr</span>
+
+    <div class="card text-white bg-dark mb-3" style="width: 90%; border-radius: 10px;">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <span class="time-label">Zhuhr</span>
             <h6 class="card-title time-container__title">${times.dhuhr}</h6>
         </div>
     </div>
-    <div class="card text-white bg-dark" style="width: 90%;">
-        <div class="card-header time-container">
-            <span>Asr</span>
+
+    <div class="card text-white bg-dark mb-3" style="width: 90%; border-radius: 10px;">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <span class="time-label">Asr</span>
             <h6 class="card-title time-container__title">${times.asr}</h6>
         </div>
     </div>
-    <div class="card text-white bg-dark" style="width: 90%;">
-        <div class="card-header time-container">
-            <span>Maghrib</span>
+
+    <div class="card text-white bg-dark mb-3" style="width: 90%; border-radius: 10px;">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <span class="time-label">Maghrib</span>
             <h6 class="card-title time-container__title">${times.maghrib}</h6>
         </div>
     </div>
-    <div class="card text-white bg-dark" style="width: 90%;">
-        <div class="card-header time-container">
-            <span>Isha</span>
+
+    <div class="card text-white bg-dark mb-3" style="width: 90%; border-radius: 10px;">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <span class="time-label">Isha</span>
             <h6 class="card-title time-container__title">${times.isha}</h6>
         </div>
     </div>
